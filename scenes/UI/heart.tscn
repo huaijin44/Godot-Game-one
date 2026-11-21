@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://bdil3gsy4m3a0"]
+
+[ext_resource type="Script" uid="uid://diqcxu65t6ny6" path="res://scenes/UI/heart.gd" id="1_28ssf"]
+
+[node name="Heart" type="TextureRect" unique_id=211654151]
+custom_minimum_size = Vector2(64, 64)
+offset_right = 40.0
+offset_bottom = 40.0
+expand_mode = 1
+stretch_mode = 5
+script = ExtResource("1_28ssf")

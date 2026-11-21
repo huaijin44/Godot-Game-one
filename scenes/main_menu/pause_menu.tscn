@@ -1,0 +1,117 @@
+[gd_scene format=3 uid="uid://dwf32b5i0l8gi"]
+
+[ext_resource type="FontFile" uid="uid://b6dfxyrghgkev" path="res://assets/fonts/zpix.ttf" id="1_cdh0q"]
+[ext_resource type="Script" uid="uid://d30dmax0ohh10" path="res://scenes/main_menu/pause_menu.gd" id="1_g03ps"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bhunq"]
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_sn0t7"]
+bg_color = Color(0.33333334, 0.33333334, 0.33333334, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_riqys"]
+expand_margin_left = 10.0
+expand_margin_top = 10.0
+expand_margin_right = 10.0
+expand_margin_bottom = 10.0
+
+[node name="PauseMenu" type="CanvasLayer" unique_id=1004275175]
+process_mode = 3
+script = ExtResource("1_g03ps")
+
+[node name="DimBackground" type="ColorRect" parent="." unique_id=528120437]
+z_index = -1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0, 0, 0, 0.518)
+
+[node name="CenterContainer" type="CenterContainer" parent="." unique_id=1573087944]
+process_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer" unique_id=11960731]
+process_mode = 3
+layout_mode = 2
+theme_override_constants/separation = 60
+
+[node name="Btn_Resume" type="Button" parent="CenterContainer/VBoxContainer" unique_id=615096328]
+process_mode = 3
+custom_minimum_size = Vector2(300, 60)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1_cdh0q")
+theme_override_font_sizes/font_size = 24
+theme_override_styles/normal = SubResource("StyleBoxFlat_bhunq")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_sn0t7")
+theme_override_styles/hover = SubResource("StyleBoxFlat_riqys")
+text = "继续游戏"
+
+[node name="Btn_Checkpoint" type="Button" parent="CenterContainer/VBoxContainer" unique_id=155173724]
+process_mode = 3
+custom_minimum_size = Vector2(300, 60)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1_cdh0q")
+theme_override_font_sizes/font_size = 24
+theme_override_styles/normal = SubResource("StyleBoxFlat_bhunq")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_sn0t7")
+theme_override_styles/hover = SubResource("StyleBoxFlat_riqys")
+text = "返回上一个检查点"
+
+[node name="Btn_Restart" type="Button" parent="CenterContainer/VBoxContainer" unique_id=849555241]
+process_mode = 3
+custom_minimum_size = Vector2(300, 60)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1_cdh0q")
+theme_override_font_sizes/font_size = 24
+theme_override_styles/normal = SubResource("StyleBoxFlat_bhunq")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_sn0t7")
+theme_override_styles/hover = SubResource("StyleBoxFlat_riqys")
+text = "从头开始"
+
+[node name="Btn_Settings" type="Button" parent="CenterContainer/VBoxContainer" unique_id=468535985]
+process_mode = 3
+custom_minimum_size = Vector2(300, 60)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1_cdh0q")
+theme_override_font_sizes/font_size = 24
+theme_override_styles/normal = SubResource("StyleBoxFlat_bhunq")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_sn0t7")
+theme_override_styles/hover = SubResource("StyleBoxFlat_riqys")
+text = "设置"
+
+[node name="Btn_Sound" type="Button" parent="CenterContainer/VBoxContainer" unique_id=1125127414]
+process_mode = 3
+custom_minimum_size = Vector2(300, 60)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1_cdh0q")
+theme_override_font_sizes/font_size = 24
+theme_override_styles/normal = SubResource("StyleBoxFlat_bhunq")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_sn0t7")
+theme_override_styles/hover = SubResource("StyleBoxFlat_riqys")
+
+[node name="Btn_MainMenu" type="Button" parent="CenterContainer/VBoxContainer" unique_id=674452054]
+process_mode = 3
+custom_minimum_size = Vector2(300, 60)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1_cdh0q")
+theme_override_font_sizes/font_size = 24
+theme_override_styles/normal = SubResource("StyleBoxFlat_bhunq")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_sn0t7")
+theme_override_styles/hover = SubResource("StyleBoxFlat_riqys")
+text = "主菜单"

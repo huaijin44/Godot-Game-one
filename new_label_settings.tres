@@ -1,0 +1,10 @@
+[gd_resource type="LabelSettings" format=3 uid="uid://l0w6g8miq7d5"]
+
+[ext_resource type="FontFile" uid="uid://b6dfxyrghgkev" path="res://assets/fonts/zpix.ttf" id="1_1nvk1"]
+
+[resource]
+font = ExtResource("1_1nvk1")
+font_size = 20
+font_color = Color(0.95281494, 0.6318537, 0.89165515, 1)
+outline_size = 1
+outline_color = Color(0, 0, 0, 1)

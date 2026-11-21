@@ -1,0 +1,137 @@
+[gd_scene format=3 uid="uid://snojeu1boa0a"]
+
+[ext_resource type="FontFile" uid="uid://b6dfxyrghgkev" path="res://assets/fonts/zpix.ttf" id="1_0hw1n"]
+[ext_resource type="Script" uid="uid://colj12xnxbu58" path="res://scenes/main_menu/result_screen.gd" id="1_aipa3"]
+[ext_resource type="Texture2D" uid="uid://bwqfmion4pm7r" path="res://assets/Background/Gray.png" id="2_k3niu"]
+[ext_resource type="Texture2D" uid="uid://brrxf4ljc11r7" path="res://assets/Menu/Buttons/Levels.png" id="2_raa66"]
+[ext_resource type="Texture2D" uid="uid://dcr0qhl8h5lbh" path="res://assets/Menu/Buttons/Restart.png" id="3_aipa3"]
+[ext_resource type="Texture2D" uid="uid://4u6dexmn33i1" path="res://assets/Menu/Buttons/Next.png" id="4_k3niu"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_aipa3"]
+font = ExtResource("1_0hw1n")
+font_size = 60
+font_color = Color(0.8820476, 0.7484859, 0.11617436, 1)
+outline_size = 1
+outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_2r0jt"]
+texture = ExtResource("2_raa66")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_xvofd"]
+texture = ExtResource("2_raa66")
+modulate_color = Color(0.4509804, 0.4509804, 0.4509804, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_jyycw"]
+texture = ExtResource("2_raa66")
+expand_margin_left = 10.0
+expand_margin_top = 10.0
+expand_margin_right = 10.0
+expand_margin_bottom = 10.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_bhunq"]
+texture = ExtResource("3_aipa3")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_riqys"]
+texture = ExtResource("3_aipa3")
+modulate_color = Color(0.4509804, 0.4509804, 0.4509804, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_sn0t7"]
+texture = ExtResource("3_aipa3")
+expand_margin_left = 10.0
+expand_margin_top = 10.0
+expand_margin_right = 10.0
+expand_margin_bottom = 10.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_6f8o3"]
+texture = ExtResource("4_k3niu")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_qr0ht"]
+texture = ExtResource("4_k3niu")
+modulate_color = Color(0.4509804, 0.4509804, 0.4509804, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_1esiv"]
+texture = ExtResource("4_k3niu")
+expand_margin_left = 10.0
+expand_margin_top = 10.0
+expand_margin_right = 10.0
+expand_margin_bottom = 10.0
+
+[sub_resource type="LabelSettings" id="LabelSettings_3edo5"]
+font = ExtResource("1_0hw1n")
+font_size = 80
+font_color = Color(0.19195384, 0.69236904, 9.62615e-07, 1)
+outline_size = 1
+outline_color = Color(0, 0, 0, 1)
+
+[node name="result_screen" type="Control" unique_id=1492282470]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_aipa3")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=511897981]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_k3niu")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1609080890]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.58900005
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = -76.120056
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 60
+
+[node name="ScoreLabel" type="Label" parent="VBoxContainer" unique_id=341487442]
+layout_mode = 2
+label_settings = SubResource("LabelSettings_aipa3")
+horizontal_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer" unique_id=972564108]
+custom_minimum_size = Vector2(105, 110)
+layout_mode = 2
+theme_override_constants/separation = 60
+
+[node name="Btn_MainMenu" type="Button" parent="VBoxContainer/HBoxContainer" unique_id=79559883]
+custom_minimum_size = Vector2(105, 110)
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxTexture_2r0jt")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_xvofd")
+theme_override_styles/hover = SubResource("StyleBoxTexture_jyycw")
+
+[node name="Btn_Restart" type="Button" parent="VBoxContainer/HBoxContainer" unique_id=1004216697]
+custom_minimum_size = Vector2(105, 110)
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxTexture_bhunq")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_riqys")
+theme_override_styles/hover = SubResource("StyleBoxTexture_sn0t7")
+
+[node name="Btn_NextLevel" type="Button" parent="VBoxContainer/HBoxContainer" unique_id=1267101533]
+custom_minimum_size = Vector2(105, 110)
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxTexture_6f8o3")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_qr0ht")
+theme_override_styles/hover = SubResource("StyleBoxTexture_1esiv")
+
+[node name="Label" type="Label" parent="." unique_id=1256387978]
+layout_mode = 0
+offset_left = 754.0
+offset_top = 212.0
+offset_right = 1534.0
+offset_bottom = 377.0
+text = "恭喜通关！！！"
+label_settings = SubResource("LabelSettings_3edo5")
